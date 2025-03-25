@@ -12,32 +12,41 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Usar dark como valor por defecto
   const [theme, setTheme] = useState<Theme>("dark");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Intentar recuperar el tema guardado, si no existe, usar oscuro por defecto
+    setMounted(true);
     const storedTheme = localStorage.getItem("theme") as Theme | null;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
     if (storedTheme) {
       setTheme(storedTheme);
-    } else {
-      // Si no hay tema almacenado, establecer oscuro por defecto
+    } else if (prefersDark) {
       setTheme("dark");
       localStorage.setItem("theme", "dark");
+    } else {
+      setTheme("light");
+      localStorage.setItem("theme", "light");
     }
   }, []);
 
   useEffect(() => {
-    // Aplicar la clase 'dark' al documento cuando el tema cambie
+    if (!mounted) return;
+
+    const root = document.documentElement;
+    const htmlElement = document.querySelector('html');
+    
     if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+      root.classList.add("dark");
+      htmlElement?.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark");
+      htmlElement?.classList.remove("dark");
     }
     
-    // Guardar el tema actual en localStorage para persistencia
     localStorage.setItem("theme", theme);
-  }, [theme]);
+  }, [theme, mounted]);
 
   const value = {
     theme,
@@ -45,6 +54,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       setTheme(newTheme);
     },
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ThemeContext.Provider value={value}>
