@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Columna 1 - Logo y descripción (4 columnas) */}
           <div className="md:col-span-4 space-y-4">
             <div className="text-xl font-bold text-zinc-900 dark:text-white">
-              José<span className="text-violet-600 dark:text-violet-400">Dev</span>
+              Salvador<span className="text-violet-600 dark:text-violet-400">Dev</span>
             </div>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl">
               {t.description}
