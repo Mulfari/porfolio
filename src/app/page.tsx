@@ -113,24 +113,45 @@ export default function Home() {
           <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-700">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Imagen del proyecto */}
-              <div className="relative overflow-hidden h-full min-h-[300px]">
+              <div className="relative overflow-hidden h-full min-h-[400px] flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-transparent z-10"></div>
-                <iframe
-                  src="https://jscm.my.canva.site/"
-                  title={t.projects[0].title}
-                  className="absolute inset-0 w-full h-full"
-                  style={{ 
-                    border: 'none',
-                    width: '100%',
-                    height: '100%',
-                    minHeight: '300px'
-                  }}
-                  loading="lazy"
-                  allow="autoplay; fullscreen"
-                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                />
+                
+                {/* Laptop en el centro */}
+                <div className="relative z-10 transform scale-[0.85] lg:scale-100">
+                  <Image
+                    src="/icons/pc.png"
+                    alt="Vista en laptop"
+                    width={600}
+                    height={400}
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+
+                {/* Tablet a la izquierda */}
+                <div className="absolute left-4 lg:left-16 z-20 transform -translate-x-1/3 translate-y-4 scale-[0.4] lg:scale-[0.55] hover:scale-[0.6] transition-transform duration-300">
+                  <Image
+                    src="/icons/tablet.png"
+                    alt="Vista en tablet"
+                    width={300}
+                    height={400}
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Mobile a la derecha */}
+                <div className="absolute right-4 lg:right-16 z-20 transform translate-x-[40%] translate-y-8 scale-[0.35] lg:scale-[0.5] hover:scale-[0.6] transition-transform duration-300">
+                  <Image
+                    src="/icons/mobile.png"
+                    alt="Vista en móvil"
+                    width={200}
+                    height={400}
+                    className="object-contain"
+                  />
+                </div>
+
                 {/* Badge de destacado */}
-                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-20">
+                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-30">
                   <Star className="w-3 h-3 mr-1" />
                   {t.featuredProject}
                 </div>
