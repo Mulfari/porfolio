@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="ai-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B2FEF" />
+      <stop offset="100%" style="stop-color:#4C1D95" />
+    </linearGradient>
+    <linearGradient id="circuit-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9333EA" />
+      <stop offset="100%" style="stop-color:#6B21A8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo del chip -->
+  <rect x="2" y="2" width="20" height="20" rx="2" fill="url(#ai-gradient)" />
+  
+  <!-- Circuitos -->
+  <path
+    fill="none"
+    stroke="url(#circuit-gradient)"
+    stroke-width="0.5"
+    stroke-linecap="round"
+    d="M6 12h4m4 0h4M12 6v4m0 4v4"
+  />
+  
+  <!-- Puntos de conexión -->
+  <circle cx="12" cy="12" r="1.5" fill="#A855F7" />
+  <circle cx="6" cy="12" r="1" fill="#A855F7" />
+  <circle cx="18" cy="12" r="1" fill="#A855F7" />
+  <circle cx="12" cy="6" r="1" fill="#A855F7" />
+  <circle cx="12" cy="18" r="1" fill="#A855F7" />
+  
+  <!-- Detalles del chip -->
+  <rect x="4" y="4" width="16" height="16" rx="1" fill="none" stroke="#C084FC" stroke-width="0.5" />
+  
+  <!-- Símbolos binarios -->
+  <text x="8" y="8" fill="#E9D5FF" font-size="2" font-family="monospace">1</text>
+  <text x="16" y="8" fill="#E9D5FF" font-size="2" font-family="monospace">0</text>
+  <text x="8" y="16" fill="#E9D5FF" font-size="2" font-family="monospace">0</text>
+  <text x="16" y="16" fill="#E9D5FF" font-size="2" font-family="monospace">1</text>
+</svg> 

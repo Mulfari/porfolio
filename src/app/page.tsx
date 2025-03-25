@@ -1,103 +1,223 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight } from "lucide-react";
+import TechIconsCarousel from "./components/Carrusel";
+import ContactModal from "./components/ContactModal";
+import { useState } from "react";
+import { useLocale } from "./i18n/LocaleContext";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const { t, locale } = useLocale();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-900">
+      {/* Modal de Contacto */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
+
+      {/* Hero Section */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex flex-col pt-4">
+          {/* Hero Principal - Pantalla completa */}
+          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 py-10 lg:py-16">
+            {/* Contenido Principal */}
+            <div className="flex-1 space-y-6 max-w-2xl">
+              <div className="space-y-2">
+                <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-tight ${locale === 'de' ? 'lg:text-4xl lg:tracking-tighter whitespace-nowrap' : ''}`}>
+                  {t.greeting} <span className="text-violet-600 dark:text-violet-400">{t.name}</span> 👋
+                </h1>
+                <h2 className="text-lg sm:text-xl lg:text-2xl text-zinc-600 dark:text-zinc-300 leading-tight">
+                  {t.role}
+                </h2>
+              </div>
+
+              <p className="text-base lg:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                {t.description}
+              </p>
+
+              {/* Botones de Acción */}
+              <div className="flex flex-wrap gap-4 pt-2">
+                <button 
+                  onClick={() => setIsContactModalOpen(true)}
+                  className="inline-flex items-center px-6 py-3 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-base transition-colors cursor-pointer shadow-lg hover:shadow-xl"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  {t.contactMe}
+                </button>
+                <div 
+                  className="inline-flex items-center px-6 py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-base transition-colors shadow-lg hover:shadow-xl cursor-not-allowed"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  {t.downloadCV}
+                </div>
+              </div>
+
+              {/* Redes Sociales */}
+              <div className="flex items-center gap-4 pt-4">
+                <a 
+                  href="https://github.com/Mulfari" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                >
+                  <Github className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/smulfari/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a 
+                  href="mailto:jscm@gmail.com"
+                  className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                >
+                  <Mail className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+
+            {/* Imagen de Perfil */}
+            <div className="relative w-72 h-72 lg:w-[28rem] lg:h-[28rem]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-violet-400 rounded-full opacity-20 blur-3xl"></div>
+              <Image
+                src="/profile.jpg"
+                alt="Foto de perfil"
+                width={450}
+                height={450}
+                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Sección de Tecnologías - Justo debajo del hero */}
+          <div className="pb-20 pt-0 lg:pt-4">
+            <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-10 text-center">
+              {t.techStack}
+            </h3>
+            <TechIconsCarousel />
+          </div>
         </div>
+
+        {/* Sección de Proyecto Destacado */}
+        <div className="py-8">
+          {/* Proyecto destacado en diseño especial */}
+          <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-700">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              {/* Imagen del proyecto */}
+              <div className="relative overflow-hidden h-full min-h-[300px]">
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-transparent z-10"></div>
+                <Image
+                  src="/icons/ecommerce.jpg"
+                  alt={t.projects[0].title}
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                {/* Badge de destacado */}
+                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-20">
+                  <Star className="w-3 h-3 mr-1" />
+                  {t.featuredProject}
+                </div>
+              </div>
+
+              {/* Información del proyecto */}
+              <div className="p-8 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-start justify-between">
+                    <h4 className="text-2xl font-bold text-zinc-900 dark:text-white">
+                      {t.projects[0].title}
+                    </h4>
+                    <span className="px-3 py-1 text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full">
+                      {t.projectStatus.inProgress}
+                    </span>
+                  </div>
+
+                  <p className="mt-4 text-zinc-700 dark:text-zinc-300 text-lg leading-relaxed">
+                    {t.projects[0].description}
+                  </p>
+
+                  <div className="mt-6">
+                    <h5 className="text-sm font-semibold text-zinc-900 dark:text-white mb-2">{t.mainFeatures}</h5>
+                    <ul className="list-disc list-inside space-y-2 text-zinc-600 dark:text-zinc-400">
+                      {t.projects[0].features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-zinc-200 dark:border-zinc-700">
+                    <h5 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3">{t.technologiesUsed}</h5>
+                    <div className="flex flex-wrap gap-2">
+                      {featuredProjects[0].technologies.map((tech) => (
+                        <span 
+                          key={tech}
+                          className="px-3 py-1 text-sm bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 mt-8">
+                  <a 
+                    href={featuredProjects[0].demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    {t.viewDemo}
+                  </a>
+                  <a 
+                    href={featuredProjects[0].github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors"
+                  >
+                    <Code className="w-4 h-4" />
+                    {t.viewCode}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Botón Ver más proyectos */}
+          <div className="mt-4 flex justify-end">
+            <Link
+              href="/proyectos"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 rounded-lg border border-zinc-200 dark:border-zinc-700 hover:border-violet-300 dark:hover:border-violet-500 hover:bg-violet-50 dark:hover:bg-violet-900/20 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              <span className="font-medium">{t.viewMore}</span>
+              <ArrowRight className="w-4 h-4 text-violet-500 dark:text-violet-400 transition-all duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Espacio para más contenido */}
+        <div className="py-16"></div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
+
+// Datos de los proyectos
+const featuredProjects = [
+  {
+    image: "/icons/ecommerce.jpg",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS", "Redux"],
+    demo: "https://demo-portfolio.vercel.app",
+    github: "https://github.com/jscm/portfolio"
+  }
+];
