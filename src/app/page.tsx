@@ -113,17 +113,34 @@ export default function Home() {
           <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-700">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Imagen del proyecto */}
-              <div className="relative overflow-hidden h-full min-h-[300px]">
+              <div className="relative overflow-hidden h-full min-h-[400px] bg-gradient-to-br from-violet-600/5 to-violet-400/5">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-transparent z-10"></div>
-                <Image
-                  src="/icons/ecommerce.jpg"
-                  alt={t.projects[0].title}
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {/* Laptop */}
+                  <div className="relative w-[85%] -mr-24 transform transition-all duration-1000 animate-fade-in-up hover:scale-105">
+                    <Image
+                      src="/icons/pc.png"
+                      alt="Laptop view"
+                      width={1000}
+                      height={625}
+                      className="w-full h-auto drop-shadow-2xl"
+                      priority
+                    />
+                  </div>
+                  {/* Mobile */}
+                  <div className="relative w-[22%] transform translate-y-4 transition-all duration-1000 animate-fade-in-right delay-300 hover:scale-105">
+                    <Image
+                      src="/icons/mobile.png"
+                      alt="Mobile view"
+                      width={250}
+                      height={500}
+                      className="w-full h-auto drop-shadow-2xl"
+                      priority
+                    />
+                  </div>
+                </div>
                 {/* Badge de destacado */}
-                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-20">
+                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-20 animate-fade-in">
                   <Star className="w-3 h-3 mr-1" />
                   {t.featuredProject}
                 </div>
@@ -215,7 +232,7 @@ export default function Home() {
 // Datos de los proyectos
 const featuredProjects = [
   {
-    image: "/icons/ecommerce.jpg",
+    image: "https://jscm.my.canva.site/",
     technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS", "Redux"],
     demo: "https://demo-portfolio.vercel.app",
     github: "https://github.com/jscm/portfolio"
