@@ -19,17 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+    <html lang="es" className="scroll-smooth">
+      <body className={`${inter.className} bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-white antialiased`}>
         <LocaleProvider>
           <ThemeProvider>
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-white">
-              <Navigation />
-              <div className="pt-16">
-                {children}
-              </div>
-              <Footer />
+            <Navigation />
+            <div className="pt-16">
+              {children}
             </div>
+            <Footer />
           </ThemeProvider>
         </LocaleProvider>
       </body>
