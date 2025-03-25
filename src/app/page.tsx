@@ -7,6 +7,7 @@ import TechIconsCarousel from "./components/Carrusel";
 import ContactModal from "./components/ContactModal";
 import { useState } from "react";
 import { useLocale } from "./i18n/LocaleContext";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Home() {
           {/* Hero Principal - Pantalla completa */}
           <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 py-10 lg:py-16">
             {/* Contenido Principal */}
-            <div className="flex-1 space-y-6 max-w-2xl">
+            <ScrollReveal className="flex-1 space-y-6 max-w-2xl">
               <div className="space-y-2">
                 <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-tight ${locale === 'de' ? 'lg:text-4xl lg:tracking-tighter whitespace-nowrap' : ''}`}>
                   {t.greeting} <span className="text-violet-600 dark:text-violet-400">{t.name}</span> 👋
@@ -82,10 +83,10 @@ export default function Home() {
                   <Mail className="w-6 h-6" />
                 </a>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Imagen de Perfil */}
-            <div className="relative w-72 h-72 lg:w-[28rem] lg:h-[28rem]">
+            <ScrollReveal delay={300} className="relative w-72 h-72 lg:w-[28rem] lg:h-[28rem]">
               <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-violet-400 rounded-full opacity-20 blur-3xl"></div>
               <Image
                 src="/profile.jpg"
@@ -95,43 +96,70 @@ export default function Home() {
                 className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl"
                 priority
               />
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Sección de Tecnologías - Justo debajo del hero */}
-          <div className="pb-20 pt-0 lg:pt-4">
+          <ScrollReveal delay={600} className="pb-20 pt-0 lg:pt-4">
             <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-10 text-center">
               {t.techStack}
             </h3>
             <TechIconsCarousel />
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Sección de Proyecto Destacado */}
-        <div className="py-8">
+        <ScrollReveal delay={300} className="py-8">
           {/* Proyecto destacado en diseño especial */}
           <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-700">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Imagen del proyecto */}
-              <div className="relative overflow-hidden h-full min-h-[300px]">
+              <div className="relative overflow-hidden h-full min-h-[400px] flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-transparent z-10"></div>
-                <iframe
-                  src="https://jscm.my.canva.site/"
-                  title={t.projects[0].title}
-                  className="w-full h-full object-cover"
-                  style={{ border: 'none' }}
-                  loading="lazy"
-                  allow="autoplay"
-                />
+                
+                {/* Laptop en el centro */}
+                <div className="relative z-10 transform scale-[0.85] lg:scale-100 animate-fade-in-up hover:scale-105 transition-all duration-300">
+                  <Image
+                    src="/icons/pc.png"
+                    alt="Vista en laptop"
+                    width={600}
+                    height={400}
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+
+                {/* Tablet a la izquierda */}
+                <div className="absolute left-4 lg:left-16 z-20 transform -translate-x-1/3 translate-y-4 scale-[0.4] lg:scale-[0.55] hover:scale-[0.6] transition-transform duration-300 animate-fade-in-up animation-delay-300">
+                  <Image
+                    src="/icons/tablet.png"
+                    alt="Vista en tablet"
+                    width={300}
+                    height={400}
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Mobile a la derecha */}
+                <div className="absolute right-4 lg:right-16 z-20 transform translate-x-[40%] translate-y-8 scale-[0.35] lg:scale-[0.5] hover:scale-[0.6] transition-transform duration-300 animate-fade-in-up animation-delay-500">
+                  <Image
+                    src="/icons/mobile.png"
+                    alt="Vista en móvil"
+                    width={200}
+                    height={400}
+                    className="object-contain"
+                  />
+                </div>
+
                 {/* Badge de destacado */}
-                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-20">
+                <div className="absolute top-4 left-4 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center z-30">
                   <Star className="w-3 h-3 mr-1" />
                   {t.featuredProject}
                 </div>
               </div>
 
               {/* Información del proyecto */}
-              <div className="p-8 flex flex-col justify-between">
+              <ScrollReveal delay={500} className="p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex items-start justify-between">
                     <h4 className="text-2xl font-bold text-zinc-900 dark:text-white">
@@ -190,12 +218,12 @@ export default function Home() {
                     {t.viewCode}
                   </a>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
           
           {/* Botón Ver más proyectos */}
-          <div className="mt-4 flex justify-end">
+          <ScrollReveal delay={700} className="mt-4 flex justify-end">
             <Link
               href="/proyectos"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 rounded-lg border border-zinc-200 dark:border-zinc-700 hover:border-violet-300 dark:hover:border-violet-500 hover:bg-violet-50 dark:hover:bg-violet-900/20 transition-all duration-300 shadow-sm hover:shadow-md"
@@ -203,8 +231,8 @@ export default function Home() {
               <span className="font-medium">{t.viewMore}</span>
               <ArrowRight className="w-4 h-4 text-violet-500 dark:text-violet-400 transition-all duration-300 group-hover:translate-x-1" />
             </Link>
-          </div>
-        </div>
+          </ScrollReveal>
+        </ScrollReveal>
 
         {/* Espacio para más contenido */}
         <div className="py-16"></div>
