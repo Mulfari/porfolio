@@ -58,7 +58,7 @@ export default function Home() {
                 </button>
                 <a 
                   href={`/docs/${locale}/cv.pdf`}
-                  download={`Salvador_Mulfari_CV_${locale.toUpperCase()}.pdf`}
+                  download="Salvador Mulfari CV.pdf"
                   className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-sm sm:text-base transition-colors shadow-lg hover:shadow-xl"
                 >
                   <Download className="w-4 h-4 mr-2" />
