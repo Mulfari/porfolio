@@ -246,7 +246,7 @@ const featuredProjects = [
   {
     image: "https://jscm.my.canva.site/",
     technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS", "Redux"],
-    demo: "https://demo-portfolio.vercel.app",
+    demo: "https://edgetrader.vercel.app/",
     github: "https://github.com/jscm/portfolio"
   }
 ];
