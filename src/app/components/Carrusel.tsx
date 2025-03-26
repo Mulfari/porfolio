@@ -362,6 +362,23 @@ export default function TechIconsCarousel() {
     { 
       icon: <div className="relative h-12 w-12 z-10">
               <Image
+                src="/icons/expo.png"
+                alt="Expo Icon"
+                width={48}
+                height={48}
+                className="text-black dark:invert"
+              />
+            </div>, 
+      name: "Expo", 
+      borderColor: "border-gray-800/50 dark:border-gray-200/50", 
+      bgGradient: "bg-gradient-to-br from-gray-800/20 to-gray-600/10 dark:from-gray-200/20 dark:to-gray-400/10",
+      pattern: "after:content-[''] after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_30%_50%,theme(colors.gray.800/10)_1px,transparent_6px)] dark:after:bg-[radial-gradient(circle_at_30%_50%,theme(colors.gray.200/10)_1px,transparent_6px)] after:bg-[length:10px_10px]",
+      textColor: "text-gray-800 dark:text-gray-200",
+      shadowColor: "shadow-gray-800/20 dark:shadow-gray-200/20"
+    },
+    { 
+      icon: <div className="relative h-12 w-12 z-10">
+              <Image
                 src="/icons/tailwind.png"
                 alt="Tailwind CSS Icon"
                 width={48}

@@ -29,8 +29,14 @@ export default function Home() {
             {/* Contenido Principal */}
             <ScrollReveal className="flex-1 space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left">
               <div className="space-y-2">
-                <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 dark:text-white leading-tight ${locale === 'de' ? 'lg:text-4xl xl:text-5xl tracking-tight' : ''}`}>
-                  {t.greeting} <span className="text-violet-600 dark:text-violet-400">{t.name}</span> 👋
+                <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 dark:text-white leading-tight flex flex-wrap items-baseline gap-x-2 gap-y-1 justify-center lg:justify-start ${
+                  locale === 'de' 
+                    ? 'lg:text-[2.75rem] xl:text-[3.25rem] tracking-tight' 
+                    : ''
+                }`}>
+                  <span className="whitespace-nowrap">{t.greeting}</span>
+                  <span className="whitespace-nowrap text-violet-600 dark:text-violet-400">{t.name}</span>
+                  <span className="whitespace-nowrap">👋</span>
                 </h1>
                 <h2 className="text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed">
                   {t.role}
@@ -50,12 +56,14 @@ export default function Home() {
                   <Mail className="w-4 h-4 mr-2" />
                   {t.contactMe}
                 </button>
-                <div 
-                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-sm sm:text-base transition-colors shadow-lg hover:shadow-xl cursor-not-allowed"
+                <a 
+                  href={`/docs/${locale}/cv.pdf`}
+                  download={`Salvador_Mulfari_CV_${locale.toUpperCase()}.pdf`}
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-sm sm:text-base transition-colors shadow-lg hover:shadow-xl"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   {t.downloadCV}
-                </div>
+                </a>
               </div>
 
               {/* Redes Sociales */}
