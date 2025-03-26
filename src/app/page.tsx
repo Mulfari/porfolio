@@ -25,33 +25,33 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen flex flex-col pt-4">
           {/* Hero Principal - Pantalla completa */}
-          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 py-10 lg:py-16">
+          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-12 py-6 lg:py-16">
             {/* Contenido Principal */}
-            <ScrollReveal className="flex-1 space-y-6 max-w-2xl">
+            <ScrollReveal className="flex-1 space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left">
               <div className="space-y-2">
-                <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-tight ${locale === 'de' ? 'lg:text-4xl lg:tracking-tighter whitespace-nowrap' : ''}`}>
+                <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 dark:text-white leading-tight ${locale === 'de' ? 'lg:text-4xl xl:text-5xl tracking-tight' : ''}`}>
                   {t.greeting} <span className="text-violet-600 dark:text-violet-400">{t.name}</span> 👋
                 </h1>
-                <h2 className="text-lg sm:text-xl lg:text-2xl text-zinc-600 dark:text-zinc-300 leading-tight">
+                <h2 className="text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed">
                   {t.role}
                 </h2>
               </div>
 
-              <p className="text-base lg:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 {t.description}
               </p>
 
               {/* Botones de Acción */}
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
                 <button 
                   onClick={() => setIsContactModalOpen(true)}
-                  className="inline-flex items-center px-6 py-3 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-base transition-colors cursor-pointer shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm sm:text-base transition-colors cursor-pointer shadow-lg hover:shadow-xl"
                 >
                   <Mail className="w-4 h-4 mr-2" />
                   {t.contactMe}
                 </button>
                 <div 
-                  className="inline-flex items-center px-6 py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-base transition-colors shadow-lg hover:shadow-xl cursor-not-allowed"
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-sm sm:text-base transition-colors shadow-lg hover:shadow-xl cursor-not-allowed"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   {t.downloadCV}
@@ -59,37 +59,37 @@ export default function Home() {
               </div>
 
               {/* Redes Sociales */}
-              <div className="flex items-center gap-4 pt-4">
+              <div className="flex items-center justify-center lg:justify-start gap-4 pt-4">
                 <a 
                   href="https://github.com/Mulfari" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                  className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  <Github className="w-6 h-6" />
+                  <Github className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/smulfari/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                  className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  <Linkedin className="w-6 h-6" />
+                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a 
                   href="mailto:jscm@gmail.com"
-                  className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                  className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  <Mail className="w-6 h-6" />
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               </div>
             </ScrollReveal>
 
             {/* Imagen de Perfil */}
-            <ScrollReveal delay={300} className="relative w-72 h-72 lg:w-[28rem] lg:h-[28rem]">
+            <ScrollReveal delay={300} className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] mb-8 lg:mb-0">
               <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-violet-400 rounded-full opacity-20 blur-3xl"></div>
               <Image
-                src="/profile.jpg"
+                src="/icons/perfil.avif"
                 alt="Foto de perfil"
                 width={450}
                 height={450}
