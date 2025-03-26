@@ -103,8 +103,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     >
       {/* Overlay de fondo semitransparente */}
       <div 
-        className="fixed inset-0 bg-black/20 backdrop-blur-[2px]"
-        style={{ backdropFilter: 'blur(2px)' }}
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm"
+        style={{ backdropFilter: 'blur(4px)' }}
       />
       
       {/* Modal */}
