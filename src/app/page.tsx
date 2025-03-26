@@ -118,7 +118,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-transparent z-10"></div>
                 
                 {/* Laptop en el centro */}
-                <div className="relative z-10 transform scale-[0.85] lg:scale-100 animate-fade-in-up hover:scale-105 transition-all duration-300">
+                <div className="relative z-10 transform scale-[0.85] lg:scale-100 animate-fade-in-up hover:scale-[1.02] transition-all duration-300">
                   <Image
                     src="/icons/pc.png"
                     alt="Vista en laptop"
@@ -130,7 +130,7 @@ export default function Home() {
                 </div>
 
                 {/* Tablet a la izquierda */}
-                <div className="absolute left-4 lg:left-16 z-20 transform -translate-x-1/3 translate-y-4 scale-[0.4] lg:scale-[0.55] hover:scale-[0.6] transition-transform duration-300 animate-fade-in-up animation-delay-300">
+                <div className="absolute left-4 lg:left-16 z-20 transform -translate-x-1/3 translate-y-4 scale-[0.4] lg:scale-[0.55] hover:scale-[0.57] transition-transform duration-300 animate-fade-in-up animation-delay-300">
                   <Image
                     src="/icons/tablet.png"
                     alt="Vista en tablet"
@@ -141,7 +141,7 @@ export default function Home() {
                 </div>
 
                 {/* Mobile a la derecha */}
-                <div className="absolute right-4 lg:right-16 z-20 transform translate-x-[40%] translate-y-8 scale-[0.35] lg:scale-[0.5] hover:scale-[0.6] transition-transform duration-300 animate-fade-in-up animation-delay-500">
+                <div className="absolute right-4 lg:right-16 z-20 transform translate-x-[40%] translate-y-8 scale-[0.35] lg:scale-[0.5] hover:scale-[0.52] transition-transform duration-300 animate-fade-in-up animation-delay-500">
                   <Image
                     src="/icons/mobile.png"
                     alt="Vista en móvil"

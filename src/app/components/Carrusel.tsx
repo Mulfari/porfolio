@@ -410,7 +410,7 @@ export default function TechIconsCarousel() {
                   <div 
                     className={`relative overflow-hidden rounded-2xl ${tech.bgGradient} backdrop-blur-sm 
                     border ${tech.borderColor} shadow-md hover:${tech.shadowColor} hover:shadow-lg
-                    transition-all duration-300 hover:scale-105 hover:-translate-y-1
+                    transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5
                     group ${tech.pattern} animate-pulse-slow`}
                   >
                     <div className="p-6 flex items-center justify-center">
