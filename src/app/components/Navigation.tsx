@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
 import { ThemeSwitch } from './ThemeSwitch';
 import dynamic from 'next/dynamic';
 
