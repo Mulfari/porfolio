@@ -1,17 +1,39 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { LocaleProvider } from "./i18n/LocaleContext";
+import { Metadata } from "next";
+import { metadata as i18nMetadata } from './i18n/metadata';
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Salvador - Desarrollador Full Stack",
-  description: "Portafolio profesional de Salvador Mulfari, desarrollador Full Stack especializado en crear experiencias digitales excepcionales",
+// Metadata por defecto en español
+const defaultMetadata: Metadata = {
+  title: {
+    template: '%s | Salvador Mulfari',
+    default: i18nMetadata.es.title,
+  },
+  description: i18nMetadata.es.description,
+  icons: {
+    icon: [
+      {
+        url: '/icons/favicon.ico',
+        sizes: 'any',
+      },
+      {
+        url: '/icons/icon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+    apple: '/icons/apple-touch-icon.png',
+    shortcut: '/icons/favicon.ico',
+  },
+  manifest: '/site.webmanifest',
 };
+
+export const metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
