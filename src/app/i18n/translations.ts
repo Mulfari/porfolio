@@ -22,6 +22,7 @@ export type Translations = {
     projectStatus: {
       inProgress: string;
       completed: string;
+      personalProject: string;
     };
     viewDemo: string;
     viewCode: string;
@@ -74,6 +75,7 @@ export const translations: Translations = {
     projectStatus: {
       inProgress: 'En desarrollo',
       completed: 'Completado',
+      personalProject: 'Proyecto personal'
     },
     viewDemo: 'Ver Demo',
     viewCode: 'Ver Código',
@@ -93,14 +95,14 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
-        title: "Plataforma de E-commerce",
-        description: "Una plataforma de comercio electrónico moderna y completa, diseñada para ofrecer una experiencia de compra fluida y atractiva. Incluye funcionalidades avanzadas como carrito de compras, pasarela de pagos y panel de administración intuitivo.",
+        title: "Plataforma de Trading",
+        description: "Una plataforma avanzada de trading que ofrece herramientas profesionales para el análisis técnico y la ejecución de operaciones en tiempo real. Diseñada para traders de todos los niveles.",
         features: [
-          "Sistema de autenticación seguro con múltiples niveles de usuarios",
-          "Carrito de compras persistente con actualizaciones en tiempo real",
-          "Pasarela de pagos integrada con Stripe",
-          "Panel de administración para gestión de productos e inventario",
-          "Diseño responsive adaptado a todos los dispositivos"
+          "Gráficos interactivos con múltiples timeframes y herramientas de análisis técnico",
+          "Integración con APIs de exchanges para trading en tiempo real",
+          "Sistema de gestión de riesgo y calculadora de posiciones",
+          "Panel de control personalizable con indicadores técnicos",
+          "Historial detallado de operaciones y análisis de rendimiento"
         ]
       },
       {
@@ -154,6 +156,7 @@ export const translations: Translations = {
     projectStatus: {
       inProgress: 'In progress',
       completed: 'Completed',
+      personalProject: 'Personal project'
     },
     viewDemo: 'View Demo',
     viewCode: 'View Code',
@@ -173,14 +176,14 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
-        title: "E-commerce Platform",
-        description: "A modern and comprehensive e-commerce platform, designed to provide a smooth and attractive shopping experience. It includes advanced features such as shopping cart, payment gateway, and intuitive admin panel.",
+        title: "Trading Platform",
+        description: "An advanced trading platform offering professional tools for technical analysis and real-time trade execution. Designed for traders of all levels.",
         features: [
-          "Secure authentication system with multiple user levels",
-          "Persistent shopping cart with real-time updates",
-          "Integrated payment gateway with Stripe",
-          "Admin panel for product and inventory management",
-          "Responsive design adapted to all devices"
+          "Interactive charts with multiple timeframes and technical analysis tools",
+          "Exchange API integration for real-time trading",
+          "Risk management system and position calculator",
+          "Customizable dashboard with technical indicators",
+          "Detailed trading history and performance analytics"
         ]
       },
       {
@@ -234,6 +237,7 @@ export const translations: Translations = {
     projectStatus: {
       inProgress: 'In Entwicklung',
       completed: 'Abgeschlossen',
+      personalProject: 'Persönliches Projekt'
     },
     viewDemo: 'Demo',
     viewCode: 'Code',
@@ -253,14 +257,14 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
-        title: "E-Commerce-Plattform",
-        description: "Eine moderne E-Commerce-Plattform mit Warenkorb, Zahlungsabwicklung und intuitivem Admin-Panel für ein optimales Einkaufserlebnis.",
+        title: "Trading-Plattform",
+        description: "Eine fortschrittliche Trading-Plattform mit professionellen Tools für technische Analyse und Echtzeit-Handel. Entwickelt für Trader aller Erfahrungsstufen.",
         features: [
-          "Sicheres Authentifizierungssystem",
-          "Echtzeit-Warenkorb",
-          "Stripe-Integration",
-          "Admin-Panel für Produkte",
-          "Responsive Design"
+          "Interaktive Charts mit verschiedenen Zeitrahmen und technischen Analysewerkzeugen",
+          "Börsen-API-Integration für Echtzeit-Trading",
+          "Risikomanagement-System und Positionsrechner",
+          "Anpassbares Dashboard mit technischen Indikatoren",
+          "Detaillierte Handelshistorie und Leistungsanalyse"
         ]
       },
       {

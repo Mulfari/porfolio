@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight, Hammer } from "lucide-react";
 import TechIconsCarousel from "./components/Carrusel";
 import ContactModal from "./components/ContactModal";
 import { useState } from "react";
@@ -170,10 +170,16 @@ export default function Home() {
               <ScrollReveal delay={500} className="p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex items-start justify-between">
-                    <h4 className="text-2xl font-bold text-zinc-900 dark:text-white">
-                      {t.projects[0].title}
-                    </h4>
-                    <span className="px-3 py-1 text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full">
+                    <div className="space-y-1">
+                      <h4 className="text-2xl font-bold text-zinc-900 dark:text-white">
+                        {t.projects[0].title}
+                      </h4>
+                      <p className="text-sm text-violet-600 dark:text-violet-400 font-medium">
+                        {t.projectStatus.personalProject}
+                      </p>
+                    </div>
+                    <span className="px-3 py-1.5 text-xs font-semibold bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full flex items-center gap-1.5 shadow-sm">
+                      <Hammer className="w-3 h-3" />
                       {t.projectStatus.inProgress}
                     </span>
                   </div>
@@ -253,7 +259,7 @@ export default function Home() {
 const featuredProjects = [
   {
     image: "https://jscm.my.canva.site/",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS", "Redux"],
+    technologies: ["Next.js", "TradingView API", "Bybit API", "WebSocket", "Nest.js", "PostgreSQL", "Railway", "Tailwind CSS"],
     demo: "https://edgetrader.vercel.app/",
     github: "https://github.com/jscm/portfolio"
   }
