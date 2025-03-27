@@ -95,6 +95,18 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
+        title: "EdgeScripts",
+        description: "Plataforma de venta de scripts y herramientas para juegos en línea. Un marketplace especializado que conecta desarrolladores con jugadores, ofreciendo soluciones seguras y optimizadas.",
+        features: [
+          "React",
+          "Node.js",
+          "Firebase",
+          "Render",
+          "TailwindCSS",
+          "Vite"
+        ]
+      },
+      {
         title: "Plataforma de Trading",
         description: "Una plataforma avanzada de trading que ofrece herramientas profesionales para el análisis técnico y la ejecución de operaciones en tiempo real. Diseñada para traders de todos los niveles.",
         features: [
@@ -176,6 +188,18 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
+        title: "EdgeScripts",
+        description: "Online marketplace for game scripts and tools. A specialized platform that connects developers with players, offering secure and optimized solutions.",
+        features: [
+          "React",
+          "Node.js",
+          "Firebase",
+          "Render",
+          "TailwindCSS",
+          "Vite"
+        ]
+      },
+      {
         title: "Trading Platform",
         description: "An advanced trading platform offering professional tools for technical analysis and real-time trade execution. Designed for traders of all levels.",
         features: [
@@ -256,6 +280,18 @@ export const translations: Translations = {
 
     // Project data
     projects: [
+      {
+        title: "EdgeScripts",
+        description: "Online-Marktplatz für Spiele-Skripte und Tools. Eine spezialisierte Plattform, die Entwickler mit Spielern verbindet und sichere und optimierte Lösungen anbietet.",
+        features: [
+          "React",
+          "Node.js",
+          "Firebase",
+          "Render",
+          "TailwindCSS",
+          "Vite"
+        ]
+      },
       {
         title: "Trading-Plattform",
         description: "Eine fortschrittliche Trading-Plattform mit professionellen Tools für technische Analyse und Echtzeit-Handel. Entwickelt für Trader aller Erfahrungsstufen.",
