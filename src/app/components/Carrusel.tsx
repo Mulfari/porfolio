@@ -393,6 +393,23 @@ export default function TechIconsCarousel() {
       textColor: "text-cyan-500",
       shadowColor: "shadow-cyan-500/20"
     },
+    { 
+      icon: <div className="relative h-12 w-12 z-10">
+              <Image
+                src="/icons/stripe.png"
+                alt="Stripe Icon"
+                width={48}
+                height={48}
+                className="text-violet-600"
+              />
+            </div>, 
+      name: "Stripe", 
+      borderColor: "border-violet-600/50", 
+      bgGradient: "bg-gradient-to-br from-violet-600/20 to-violet-400/10",
+      pattern: "after:content-[''] after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_35%_65%,theme(colors.violet.600/15)_0,transparent_8px)] after:bg-[length:13px_13px]",
+      textColor: "text-violet-600",
+      shadowColor: "shadow-violet-600/20"
+    },
   ]
 
   // Asegurarnos de que los colores del desvanecimiento coincidan con el tema actual

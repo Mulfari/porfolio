@@ -13,9 +13,9 @@ export function ThemeSwitch() {
       aria-label="Cambiar tema"
     >
       {theme === "dark" ? (
-        <Sun className="h-5 w-5" />
+        <Sun className="h-5 w-5 text-amber-500" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5 text-violet-600" />
       )}
     </button>
   );

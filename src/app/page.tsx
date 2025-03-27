@@ -258,9 +258,8 @@ export default function Home() {
 // Datos de los proyectos
 const featuredProjects = [
   {
-    image: "https://jscm.my.canva.site/",
     technologies: ["Next.js", "TradingView API", "Bybit API", "WebSocket", "Nest.js", "PostgreSQL", "Railway", "Tailwind CSS"],
     demo: "https://edgetrader.vercel.app/",
-    github: "https://github.com/jscm/portfolio"
+    github: "https://github.com/Mulfari/edgetrader"
   }
 ];

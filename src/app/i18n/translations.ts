@@ -95,18 +95,6 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
-        title: "EdgeScripts",
-        description: "Plataforma de venta de scripts y herramientas para juegos en línea. Un marketplace especializado que conecta desarrolladores con jugadores, ofreciendo soluciones seguras y optimizadas.",
-        features: [
-          "React",
-          "Node.js",
-          "Firebase",
-          "Render",
-          "TailwindCSS",
-          "Vite"
-        ]
-      },
-      {
         title: "Plataforma de Trading",
         description: "Una plataforma avanzada de trading que ofrece herramientas profesionales para el análisis técnico y la ejecución de operaciones en tiempo real. Diseñada para traders de todos los niveles.",
         features: [
@@ -118,25 +106,25 @@ export const translations: Translations = {
         ]
       },
       {
-        title: "Aplicación de Gestión de Proyectos",
-        description: "Sistema colaborativo para la gestión eficiente de proyectos y tareas en equipo, con funcionalidades de seguimiento en tiempo real, asignación de recursos y generación de informes.",
+        title: "EdgeScripts",
+        description: "Plataforma de venta de scripts y herramientas automatizadas para juegos en línea. Desarrollada con tecnologías modernas para ofrecer una experiencia de usuario fluida y segura.",
         features: [
-          "Tableros kanban personalizables con drag & drop",
-          "Sistema de comentarios y menciones para comunicación de equipo",
-          "Gráficos de Gantt para visualización de cronogramas",
-          "Integración con Google Calendar y Microsoft Teams",
-          "Notificaciones en tiempo real y alertas de vencimiento"
+          "React y Vite para una interfaz de usuario moderna y rápida",
+          "Node.js para el backend robusto y escalable",
+          "Firebase para autenticación y base de datos en tiempo real",
+          "Stripe para procesamiento seguro de pagos",
+          "Render para el despliegue continuo y confiable"
         ]
       },
       {
-        title: "Portal de Aprendizaje Online",
-        description: "Plataforma educativa con cursos interactivos, seguimiento de progreso y certificaciones. Ideal para instituciones educativas o empresas que buscan capacitar a su personal.",
+        title: "WeatherApp",
+        description: "Aplicación web que proporciona información meteorológica en tiempo real. Desarrollada con React y la API de pronóstico del tiempo para ofrecer datos precisos y actualizados.",
         features: [
-          "Reproductor de video con transcripciones automáticas",
-          "Sistema de evaluación con diferentes tipos de exámenes",
-          "Foros de discusión y salas de estudio virtuales",
-          "Generación de certificados personalizados",
-          "Analíticas detalladas de aprendizaje por estudiante"
+          "React y Vite para una interfaz moderna y responsiva",
+          "Integración con API de pronóstico del tiempo",
+          "Diseño adaptable para todos los dispositivos",
+          "Información detallada de temperatura y condiciones",
+          "Búsqueda de ubicaciones por nombre"
         ]
       }
     ],
@@ -188,18 +176,6 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
-        title: "EdgeScripts",
-        description: "Online marketplace for game scripts and tools. A specialized platform that connects developers with players, offering secure and optimized solutions.",
-        features: [
-          "React",
-          "Node.js",
-          "Firebase",
-          "Render",
-          "TailwindCSS",
-          "Vite"
-        ]
-      },
-      {
         title: "Trading Platform",
         description: "An advanced trading platform offering professional tools for technical analysis and real-time trade execution. Designed for traders of all levels.",
         features: [
@@ -211,25 +187,25 @@ export const translations: Translations = {
         ]
       },
       {
-        title: "Project Management Application",
-        description: "Collaborative system for efficient management of team projects and tasks, with real-time tracking capabilities, resource allocation, and report generation.",
+        title: "EdgeScripts",
+        description: "Platform for selling scripts and automated tools for online games. Developed with modern technologies to provide a smooth and secure user experience.",
         features: [
-          "Customizable kanban boards with drag & drop",
-          "Comment and mention system for team communication",
-          "Gantt charts for timeline visualization",
-          "Integration with Google Calendar and Microsoft Teams",
-          "Real-time notifications and deadline alerts"
+          "React and Vite for a modern and fast user interface",
+          "Node.js for robust and scalable backend",
+          "Firebase for authentication and real-time database",
+          "Stripe for secure payment processing",
+          "Render for continuous and reliable deployment"
         ]
       },
       {
-        title: "Online Learning Portal",
-        description: "Educational platform with interactive courses, progress tracking and certifications. Ideal for educational institutions or companies looking to train their staff.",
+        title: "WeatherApp",
+        description: "Web application that provides real-time weather information. Developed with React and the weather forecast API to offer accurate and up-to-date data.",
         features: [
-          "Video player with automatic transcriptions",
-          "Evaluation system with different types of exams",
-          "Discussion forums and virtual study rooms",
-          "Generation of personalized certificates",
-          "Detailed learning analytics per student"
+          "React and Vite for a modern and responsive interface",
+          "Weather forecast API integration",
+          "Responsive design for all devices",
+          "Detailed temperature and conditions information",
+          "Location search by name"
         ]
       }
     ],
@@ -281,18 +257,6 @@ export const translations: Translations = {
     // Project data
     projects: [
       {
-        title: "EdgeScripts",
-        description: "Online-Marktplatz für Spiele-Skripte und Tools. Eine spezialisierte Plattform, die Entwickler mit Spielern verbindet und sichere und optimierte Lösungen anbietet.",
-        features: [
-          "React",
-          "Node.js",
-          "Firebase",
-          "Render",
-          "TailwindCSS",
-          "Vite"
-        ]
-      },
-      {
         title: "Trading-Plattform",
         description: "Eine fortschrittliche Trading-Plattform mit professionellen Tools für technische Analyse und Echtzeit-Handel. Entwickelt für Trader aller Erfahrungsstufen.",
         features: [
@@ -304,25 +268,25 @@ export const translations: Translations = {
         ]
       },
       {
-        title: "Projektmanagement-Anwendung",
-        description: "Kollaboratives System für effizientes Management von Teamprojekten und Aufgaben, mit Echtzeit-Tracking, Ressourcenzuweisung und Berichtserstellung.",
+        title: "EdgeScripts",
+        description: "Plattform für den Verkauf von Skripten und automatisierten Tools für Online-Spiele. Entwickelt mit modernen Technologien für eine reibungslose und sichere Benutzererfahrung.",
         features: [
-          "Anpassbare Kanban-Boards mit Drag & Drop",
-          "Kommentar- und Erwähnungssystem für Teamkommunikation",
-          "Gantt-Diagramme zur Zeitplanung",
-          "Integration mit Google Calendar und Microsoft Teams",
-          "Echtzeit-Benachrichtigungen"
+          "React und Vite für eine moderne und schnelle Benutzeroberfläche",
+          "Node.js für robustes und skalierbares Backend",
+          "Firebase für Authentifizierung und Echtzeit-Datenbank",
+          "Stripe für sichere Zahlungsabwicklung",
+          "Render für kontinuierliche und zuverlässige Bereitstellung"
         ]
       },
       {
-        title: "Online-Lernportal",
-        description: "Bildungsplattform mit interaktiven Kursen, Fortschrittsverfolgung und Zertifizierungen für Bildungseinrichtungen oder Unternehmen.",
+        title: "WetterApp",
+        description: "Webanwendung, die Echtzeit-Wetterinformationen bereitstellt. Entwickelt mit React und der Wettervorhersage-API für genaue und aktuelle Daten.",
         features: [
-          "Videoplayer mit automatischen Transkriptionen",
-          "Bewertungssystem mit verschiedenen Prüfungsarten",
-          "Diskussionsforen und virtuelle Lernräume",
-          "Erstellung personalisierter Zertifikate",
-          "Detaillierte Lernanalysen pro Student"
+          "React und Vite für eine moderne und responsive Benutzeroberfläche",
+          "Integration der Wettervorhersage-API",
+          "Responsives Design für alle Geräte",
+          "Detaillierte Temperatur- und Wetterbedingungen",
+          "Standortsuche nach Namen"
         ]
       }
     ],

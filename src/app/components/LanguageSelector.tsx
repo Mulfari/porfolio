@@ -64,7 +64,7 @@ export function LanguageSelector() {
                 changeLocale(lang);
                 setIsOpen(false);
               }}
-              className={`w-full text-left px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors ${
+              className={`w-full text-left px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors cursor-pointer ${
                 locale === lang ? 'bg-zinc-100 dark:bg-zinc-700 text-violet-600 dark:text-violet-400 font-medium' : 'text-zinc-700 dark:text-zinc-300'
               }`}
             >
