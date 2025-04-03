@@ -47,7 +47,7 @@ const categories = [
 ];
 
 export default function ToolsPage() {
-  const { t, locale } = useLocale();
+  const { locale } = useLocale();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [filteredTools, setFilteredTools] = useState<Tool[]>(tools);
@@ -189,7 +189,7 @@ export default function ToolsPage() {
         <ScrollReveal delay={400}>
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
             {filteredTools.length > 0 ? (
-              filteredTools.map((tool, index) => (
+              filteredTools.map((tool) => (
                 <div
                   key={tool.id}
                   className="bg-white dark:bg-zinc-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-700 flex flex-col md:flex-row"

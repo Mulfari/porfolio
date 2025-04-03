@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useMemo } from 'react';
 import { translations, Translations } from './translations';
 
 type Locale = 'es' | 'en' | 'de';
@@ -16,7 +16,7 @@ type LocaleContextType = {
   locale: Locale;
   t: Translations[Locale];
   changeLocale: (newLocale: Locale) => void;
-  locales: Locale[];
+  locales: readonly Locale[];
 };
 
 // Crear el contexto con valores predeterminados para evitar problemas con SSR
@@ -30,8 +30,10 @@ const defaultContextValue: LocaleContextType = {
 const LocaleContext = createContext<LocaleContextType>(defaultContextValue);
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('en');
-  const locales: Locale[] = ['es', 'en', 'de'];
+  const [locale, setLocale] = useState<Locale>('es');
+  
+  // Usar useMemo para 'locales' para evitar que se vuelva a crear en cada renderizado
+  const locales = useMemo(() => ['es', 'en', 'de'] as const, []);
 
   useEffect(() => {
     async function detectLocale() {

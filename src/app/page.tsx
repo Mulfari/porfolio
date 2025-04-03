@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight, Hammer, Wrench, Settings, Layers } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight, Hammer, Layers } from "lucide-react";
 import TechIconsCarousel from "./components/Carrusel";
 import ContactModal from "./components/ContactModal";
 import { useState } from "react";
