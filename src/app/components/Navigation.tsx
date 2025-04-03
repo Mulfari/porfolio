@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { ThemeSwitch } from './ThemeSwitch';
 import dynamic from 'next/dynamic';
-import { useLocale } from '../i18n/LocaleContext';
 
 // Importar LanguageSelector dinámicamente para evitar problemas con la hidratación
 const LanguageSelector = dynamic(
@@ -12,9 +11,6 @@ const LanguageSelector = dynamic(
 );
 
 export default function Navigation() {
-  // Usar desestructuración solo para lo que necesitamos
-  const { t } = useLocale();
-  
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
