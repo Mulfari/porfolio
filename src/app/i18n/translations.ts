@@ -117,6 +117,18 @@ export const translations: Translations = {
         ]
       },
       {
+        title: "Control de Acceso",
+        description: "Sistema de control de acceso con asignación de roles, contabilidad e inventario. Proyecto desarrollado a pedido para un cliente, ofreciendo una solución completa para la gestión de accesos y recursos.",
+        features: [
+          "Next.js para el frontend y Nest.js para el backend",
+          "Zustand para manejo de estado global",
+          "PostgreSQL con TypeORM como ORM",
+          "Sistema de roles y permisos",
+          "Módulos de contabilidad e inventario",
+          "Despliegue continuo con Vercel"
+        ]
+      },
+      {
         title: "WeatherApp",
         description: "Aplicación web que proporciona información meteorológica en tiempo real. Desarrollada con React y la API de pronóstico del tiempo para ofrecer datos precisos y actualizados.",
         features: [
@@ -198,6 +210,18 @@ export const translations: Translations = {
         ]
       },
       {
+        title: "Access Control",
+        description: "Access control system with role assignment, accounting and inventory. Project developed for a client, offering a complete solution for access and resource management.",
+        features: [
+          "Next.js for frontend and Nest.js for backend",
+          "Zustand for global state management",
+          "PostgreSQL with TypeORM as ORM",
+          "Role and permission system",
+          "Accounting and inventory modules",
+          "Continuous deployment with Vercel"
+        ]
+      },
+      {
         title: "WeatherApp",
         description: "Web application that provides real-time weather information. Developed with React and the weather forecast API to offer accurate and up-to-date data.",
         features: [
@@ -276,6 +300,18 @@ export const translations: Translations = {
           "Firebase für Authentifizierung und Echtzeit-Datenbank",
           "Stripe für sichere Zahlungsabwicklung",
           "Render für kontinuierliche und zuverlässige Bereitstellung"
+        ]
+      },
+      {
+        title: "Zugangskontrolle",
+        description: "Zugangskontrollsystem mit Rollenzuweisung, Buchhaltung und Inventar. Projekt für einen Kunden entwickelt, das eine komplette Lösung für die Zugangs- und Ressourcenverwaltung bietet.",
+        features: [
+          "Next.js für Frontend und Nest.js für Backend",
+          "Zustand für globales State-Management",
+          "PostgreSQL mit TypeORM als ORM",
+          "Rollen- und Berechtigungssystem",
+          "Buchhaltungs- und Inventarmodule",
+          "Kontinuierliche Bereitstellung mit Vercel"
         ]
       },
       {

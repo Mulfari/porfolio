@@ -129,7 +129,13 @@ export default function Projects() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-violet-600/10 to-violet-600/5 rounded-2xl" />
                         <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg">
                           <Image
-                            src={project.title === "EdgeScripts" ? "/icons/edgetablet.avif" : "/icons/climatablet.avif"}
+                            src={
+                              project.title === "EdgeScripts" 
+                                ? "/icons/edgetablet.avif" 
+                                : project.title === "Control de Acceso"
+                                  ? "/icons/tabletcontrol.png"
+                                  : "/icons/climatablet.avif"
+                            }
                             alt={`${project.title} Tablet View`}
                             fill
                             className="object-cover"
@@ -227,6 +233,16 @@ export default function Projects() {
                             {pageTexts.viewGithub}
                           </a>
                         </>
+                      ) : project.title === "Control de Acceso" ? (
+                        <a 
+                          href="https://control-eosin.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-medium text-white bg-violet-600 rounded-lg shadow-md"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          {pageTexts.visitSite}
+                        </a>
                       ) : project.title === "WeatherApp" || project.title === "WetterApp" ? (
                         <>
                           <a 
