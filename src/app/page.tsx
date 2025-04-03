@@ -94,14 +94,14 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Imagen de Perfil */}
-            <ScrollReveal delay={300} className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] mb-8 lg:mb-0">
+            <ScrollReveal delay={300} className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-88 lg:h-88 xl:w-[24rem] xl:h-[24rem] mb-8 lg:mb-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-violet-400 rounded-full opacity-20 blur-3xl"></div>
               <Image
                 src="/icons/perfil.avif"
                 alt="Foto de perfil"
-                width={450}
-                height={450}
-                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl"
+                width={420}
+                height={420}
+                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-14"
                 priority
               />
             </ScrollReveal>
