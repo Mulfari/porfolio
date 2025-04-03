@@ -34,7 +34,8 @@ export default function Projects() {
       technologies: "Stack tecnológico",
       visitSite: "Visitar sitio",
       viewGithub: "Ver en GitHub",
-      learningProject: "Proyecto de aprendizaje"
+      learningProject: "Proyecto de aprendizaje",
+      clientProject: "Proyecto para cliente"
     },
     en: {
       title: "Projects",
@@ -48,7 +49,8 @@ export default function Projects() {
       technologies: "Tech stack",
       visitSite: "Visit site",
       viewGithub: "View on GitHub",
-      learningProject: "Learning project"
+      learningProject: "Learning project",
+      clientProject: "Client project"
     },
     de: {
       title: "Projekte",
@@ -62,7 +64,8 @@ export default function Projects() {
       technologies: "Tech-Stack",
       visitSite: "Website besuchen",
       viewGithub: "Auf GitHub ansehen",
-      learningProject: "Lernprojekt"
+      learningProject: "Lernprojekt",
+      clientProject: "Kundenprojekt"
     }
   };
 
@@ -132,7 +135,7 @@ export default function Projects() {
                             src={
                               project.title === "EdgeScripts" 
                                 ? "/icons/edgetablet.avif" 
-                                : project.title === "Control de Acceso"
+                                : project.title === "Control de Acceso" || project.title === "Access Control" || project.title === "Zugangskontrolle"
                                   ? "/icons/tabletcontrol.png"
                                   : "/icons/climatablet.avif"
                             }
@@ -177,6 +180,15 @@ export default function Projects() {
                           <span className="px-2.5 py-0.5 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full ring-1 ring-emerald-200 dark:ring-emerald-800">
                             {pageTexts.learningProject}
                           </span>
+                        ) : project.title === "Control de Acceso" || project.title === "Access Control" || project.title === "Zugangskontrolle" ? (
+                          <>
+                            <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full ring-1 ring-blue-200 dark:ring-blue-800">
+                              {pageTexts.clientProject}
+                            </span>
+                            <span className="px-2.5 py-0.5 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full ring-1 ring-emerald-200 dark:ring-emerald-800">
+                              {pageTexts.completed}
+                            </span>
+                          </>
                         ) : (
                           <>
                             <span className="px-2.5 py-0.5 text-xs font-medium bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 rounded-full ring-1 ring-violet-200 dark:ring-violet-800">

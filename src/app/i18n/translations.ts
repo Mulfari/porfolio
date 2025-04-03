@@ -23,6 +23,7 @@ export type Translations = {
       inProgress: string;
       completed: string;
       personalProject: string;
+      clientProject: string;
     };
     viewDemo: string;
     viewCode: string;
@@ -75,7 +76,8 @@ export const translations: Translations = {
     projectStatus: {
       inProgress: 'En desarrollo',
       completed: 'Completado',
-      personalProject: 'Proyecto personal'
+      personalProject: 'Proyecto personal',
+      clientProject: 'Proyecto para cliente'
     },
     viewDemo: 'Ver Demo',
     viewCode: 'Ver Código',
@@ -168,7 +170,8 @@ export const translations: Translations = {
     projectStatus: {
       inProgress: 'In progress',
       completed: 'Completed',
-      personalProject: 'Personal project'
+      personalProject: 'Personal project',
+      clientProject: 'Client project'
     },
     viewDemo: 'View Demo',
     viewCode: 'View Code',
@@ -261,7 +264,8 @@ export const translations: Translations = {
     projectStatus: {
       inProgress: 'In Entwicklung',
       completed: 'Abgeschlossen',
-      personalProject: 'Persönliches Projekt'
+      personalProject: 'Persönliches Projekt',
+      clientProject: 'Kundenprojekt'
     },
     viewDemo: 'Demo',
     viewCode: 'Code',
