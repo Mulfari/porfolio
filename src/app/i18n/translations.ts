@@ -31,6 +31,10 @@ export type Translations = {
     mainFeatures: string;
     technologiesUsed: string;
     
+    // Tools section
+    tools: string;
+    toolsDescription: string;
+    
     // Contact modal
     contactInfo: string;
     contactVia: string;
@@ -84,6 +88,10 @@ export const translations: Translations = {
     viewMore: 'Ver más proyectos',
     mainFeatures: 'Características principales:',
     technologiesUsed: 'Tecnologías utilizadas:',
+    
+    // Tools section
+    tools: 'Herramientas',
+    toolsDescription: 'Colección de herramientas útiles para el desarrollo y la productividad',
     
     // Contact modal
     contactInfo: 'Mis datos de contacto',
@@ -179,6 +187,10 @@ export const translations: Translations = {
     mainFeatures: 'Main features:',
     technologiesUsed: 'Technologies used:',
     
+    // Tools section
+    tools: 'Tools',
+    toolsDescription: 'Collection of useful tools for development and productivity',
+    
     // Contact modal
     contactInfo: 'My contact information',
     contactVia: 'You can contact me through the following channels:',
@@ -272,6 +284,10 @@ export const translations: Translations = {
     viewMore: 'Mehr Projekte',
     mainFeatures: 'Funktionen:',
     technologiesUsed: 'Technologien:',
+    
+    // Tools section
+    tools: 'Tools',
+    toolsDescription: 'Sammlung von nützlichen Tools für Entwicklung und Produktivität',
     
     // Contact modal
     contactInfo: 'Kontaktdaten',

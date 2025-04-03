@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight, Hammer } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink, Code, Star, ArrowRight, Hammer, Wrench, Settings, Layers } from "lucide-react";
 import TechIconsCarousel from "./components/Carrusel";
 import ContactModal from "./components/ContactModal";
 import { useState } from "react";
@@ -85,7 +85,7 @@ export default function Home() {
                   <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a 
-                  href="mailto:jscm@gmail.com"
+                  href="mailto:jscmulfari@gmail.com"
                   className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -248,8 +248,34 @@ export default function Home() {
           </ScrollReveal>
         </ScrollReveal>
 
+        {/* Sección de acceso a Herramientas */}
+        <ScrollReveal delay={400} className="py-16">
+          <div className="bg-gradient-to-r from-violet-50 to-zinc-50 dark:from-violet-950/30 dark:to-zinc-900 rounded-2xl overflow-hidden shadow-lg border border-violet-100 dark:border-violet-900/30 p-8">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+              <div className="flex-1 space-y-4 text-center lg:text-left">
+                <h3 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white">
+                  {t.tools}
+                </h3>
+                <p className="text-zinc-600 dark:text-zinc-300 text-sm sm:text-base max-w-xl">
+                  {t.toolsDescription}
+                </p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <Link
+                  href={locale === 'en' ? '/en/tools' : locale === 'de' ? '/de/tools' : '/herramientas'}
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-lg transition-colors shadow-md hover:shadow-lg"
+                >
+                  <Layers className="w-5 h-5" />
+                  <span>{locale === 'es' ? 'Explorar herramientas' : locale === 'en' ? 'Explore tools' : 'Tools erkunden'}</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* Espacio para más contenido */}
-        <div className="py-16"></div>
+        <div className="py-8"></div>
       </main>
     </div>
   );

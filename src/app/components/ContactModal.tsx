@@ -23,8 +23,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   // Actualizar los datos de contacto para usar JSCM en lugar de jscmulfari
   const contactInfo = {
-    email: "jscm@gmail.com",
-    telegram: "@jscm"
+    email: "jscmulfari@gmail.com",
+    telegram: "@mulfari"
   };
 
   // Gestionar la animación de entrada/salida del modal
