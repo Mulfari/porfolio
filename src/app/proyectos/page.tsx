@@ -147,15 +147,19 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    {/* Vista Mobile - Solo mostrar para EdgeScripts */}
-                    {project.title === "EdgeScripts" && (
+                    {/* Vista Mobile - Solo mostrar para EdgeScripts o Control de Acceso */}
+                    {(project.title === "EdgeScripts" || project.title === "Control de Acceso" || project.title === "Access Control" || project.title === "Zugangskontrolle") && (
                       <div className="absolute right-4 -bottom-4 h-56 w-28 z-20">
                         <div className="relative w-full h-full">
                           <div className="absolute inset-0 bg-zinc-900/5 dark:bg-zinc-800/5 rounded-3xl" />
                           <div className="absolute inset-0 bg-gradient-to-tr from-violet-600/10 to-violet-600/5 rounded-3xl" />
                           <div className="relative w-full h-full overflow-hidden rounded-3xl shadow-lg">
                             <Image
-                              src="/icons/edgemobile.avif"
+                              src={
+                                project.title === "EdgeScripts" 
+                                  ? "/icons/edgemobile.avif" 
+                                  : "/icons/mobilecontrol.png"
+                              }
                               alt={`${project.title} Mobile View`}
                               fill
                               className="object-cover"
