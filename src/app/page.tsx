@@ -25,9 +25,9 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen flex flex-col pt-4">
           {/* Hero Principal - Pantalla completa */}
-          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-12 py-6 lg:py-16">
+          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12 py-6 lg:py-16">
             {/* Contenido Principal */}
-            <ScrollReveal className="flex-1 space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left">
+            <ScrollReveal className="flex-1 space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left pt-0 sm:pt-2">
               <div className="space-y-2">
                 <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 dark:text-white leading-tight flex flex-wrap items-baseline gap-x-2 gap-y-1 justify-center lg:justify-start ${
                   locale === 'de' 
@@ -94,14 +94,14 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Imagen de Perfil */}
-            <ScrollReveal delay={300} className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[22rem] xl:h-[22rem] mb-4 lg:mb-0 flex items-center justify-center">
+            <ScrollReveal delay={300} className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-[22rem] xl:h-[22rem] mb-2 lg:mb-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-violet-400 rounded-full opacity-20 blur-3xl"></div>
               <Image
                 src="/icons/perfil.avif"
                 alt="Foto de perfil"
-                width={380}
-                height={380}
-                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-2 sm:translate-y-6 lg:translate-y-10"
+                width={300}
+                height={300}
+                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-0 sm:translate-y-2 lg:translate-y-6"
                 priority
               />
             </ScrollReveal>
