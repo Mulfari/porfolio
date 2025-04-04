@@ -25,11 +25,11 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen flex flex-col pt-4">
           {/* Hero Principal - Pantalla completa */}
-          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12 py-4 lg:py-16">
+          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-12 py-6 lg:py-16">
             {/* Contenido Principal */}
-            <ScrollReveal className="flex-1 space-y-3 sm:space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left mt-0 pt-0">
-              <div className="space-y-1 sm:space-y-2">
-                <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 dark:text-white leading-tight flex flex-wrap items-baseline gap-x-2 gap-y-1 justify-center lg:justify-start ${
+            <ScrollReveal className="flex-1 space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left">
+              <div className="space-y-2">
+                <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 dark:text-white leading-tight flex flex-wrap items-baseline gap-x-2 gap-y-1 justify-center lg:justify-start ${
                   locale === 'de' 
                     ? 'lg:text-[2.75rem] xl:text-[3.25rem] tracking-tight' 
                     : ''
@@ -38,57 +38,57 @@ export default function Home() {
                   <span className="whitespace-nowrap text-violet-600 dark:text-violet-400">{t.name}</span>
                   <span className="whitespace-nowrap">👋</span>
                 </h1>
-                <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                <h2 className="text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed">
                   {t.role}
                 </h2>
               </div>
 
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-sm sm:text-base lg:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 {t.description}
               </p>
 
               {/* Botones de Acción */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 pt-1 sm:pt-2">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
                 <button 
                   onClick={() => setIsContactModalOpen(true)}
-                  className="inline-flex items-center px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs sm:text-sm md:text-base transition-colors cursor-pointer shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm sm:text-base transition-colors cursor-pointer shadow-lg hover:shadow-xl"
                 >
-                  <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+                  <Mail className="w-4 h-4 mr-2" />
                   {t.contactMe}
                 </button>
                 <a 
                   href={`/docs/${locale}/cv.pdf`}
                   download="Salvador Mulfari CV.pdf"
-                  className="inline-flex items-center px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-xs sm:text-sm md:text-base transition-colors shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-sm sm:text-base transition-colors shadow-lg hover:shadow-xl"
                 >
-                  <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+                  <Download className="w-4 h-4 mr-2" />
                   {t.downloadCV}
                 </a>
               </div>
 
               {/* Redes Sociales */}
-              <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-3 sm:pt-4">
+              <div className="flex items-center justify-center lg:justify-start gap-4 pt-4">
                 <a 
                   href="https://github.com/Mulfari" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 sm:p-2.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                  className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Github className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/smulfari/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 sm:p-2.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                  className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a 
                   href="mailto:jscmulfari@gmail.com"
-                  className="p-2 sm:p-2.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
+                  className="p-2.5 sm:p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               </div>
             </ScrollReveal>
@@ -101,15 +101,15 @@ export default function Home() {
                 alt="Foto de perfil"
                 width={380}
                 height={380}
-                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-8 sm:translate-y-10 lg:translate-y-12"
+                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-2 sm:translate-y-6 lg:translate-y-10"
                 priority
               />
             </ScrollReveal>
           </div>
 
           {/* Sección de Tecnologías - Justo debajo del hero */}
-          <ScrollReveal delay={600} className="pb-12 sm:pb-16 lg:pb-20 pt-0 sm:pt-2 lg:pt-4">
-            <h3 className="text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-white mb-6 sm:mb-8 lg:mb-10 text-center">
+          <ScrollReveal delay={600} className="pb-20 pt-0 lg:pt-4">
+            <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-10 text-center">
               {t.techStack}
             </h3>
             <TechIconsCarousel />
