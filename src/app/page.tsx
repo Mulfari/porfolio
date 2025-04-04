@@ -101,7 +101,7 @@ export default function Home() {
                 alt="Foto de perfil"
                 width={420}
                 height={420}
-                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-14"
+                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-8"
                 priority
               />
             </ScrollReveal>
