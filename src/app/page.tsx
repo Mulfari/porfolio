@@ -23,9 +23,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="min-h-screen flex flex-col pt-4">
+        <div className="min-h-[85vh] flex flex-col pt-8">
           {/* Hero Principal - Pantalla completa */}
-          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-12 py-10 lg:py-20">
+          <div className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-12 py-8 lg:py-20">
             {/* Contenido Principal */}
             <ScrollReveal className="flex-1 space-y-4 lg:space-y-6 max-w-2xl px-4 text-center lg:text-left">
               <div className="space-y-2">
@@ -94,14 +94,14 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Imagen de Perfil */}
-            <ScrollReveal delay={300} className="relative w-52 h-44 sm:w-60 sm:h-52 md:w-72 md:h-56 lg:w-80 lg:h-64 xl:w-[22rem] xl:h-72 mb-2 lg:mb-0 flex items-center justify-center overflow-hidden">
+            <ScrollReveal delay={300} className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-88 lg:h-88 xl:w-[24rem] xl:h-[24rem] mb-8 lg:mb-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-violet-400 rounded-full opacity-20 blur-3xl"></div>
               <Image
                 src="/icons/perfil.avif"
                 alt="Foto de perfil"
-                width={400}
-                height={400}
-                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-top scale-110"
+                width={420}
+                height={420}
+                className="relative rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl object-cover object-center translate-y-14"
                 priority
               />
             </ScrollReveal>
