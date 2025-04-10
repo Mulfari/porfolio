@@ -24,6 +24,18 @@ type Tool = {
 // Lista de herramientas
 const tools: Tool[] = [
   {
+    id: "svgrepo",
+    name: "SVG Repo",
+    description: {
+      es: "Colección de más de 500.000 vectores SVG y iconos de uso libre. Plataforma para buscar, explorar, editar y compartir vectores SVG con licencia abierta, ideal para diseñadores y desarrolladores web.",
+      en: "Collection of over 500,000 free-to-use SVG vectors and icons. Platform to search, explore, edit and share open-licensed SVG vectors, perfect for web designers and developers.",
+      de: "Sammlung von über 500.000 frei verwendbaren SVG-Vektoren und Icons. Plattform zum Suchen, Erkunden, Bearbeiten und Teilen von SVG-Vektoren mit offener Lizenz, ideal für Webdesigner und Entwickler."
+    },
+    url: "https://www.svgrepo.com/",
+    category: "design",
+    icon: "/tech/svg.png"
+  },
+  {
     id: "postspark",
     name: "PostSpark",
     description: {
