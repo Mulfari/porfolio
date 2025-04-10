@@ -46,6 +46,18 @@ const tools: Tool[] = [
     url: "https://postspark.app/",
     category: "design",
     icon: "/icons/pstablet.png"
+  },
+  {
+    id: "rosencharts",
+    name: "Rosen Charts",
+    description: {
+      es: "Biblioteca de gráficos moderna compatible con React Server Components. Permite crear visualizaciones de datos personalizables y estéticas con soporte para modo oscuro y las últimas tecnologías web, reduciendo tamaños de paquetes y optimizando el rendimiento.",
+      en: "Modern charting library fully compatible with React Server Components. Create customizable and aesthetic data visualizations with dark mode support and the latest web technologies, reducing bundle sizes and optimizing performance.",
+      de: "Moderne Diagrammbibliothek, vollständig kompatibel mit React Server Components. Erstellen Sie anpassbare und ästhetische Datenvisualisierungen mit Dark-Mode-Unterstützung und neuesten Web-Technologien, reduzieren Sie Paketgrößen und optimieren Sie die Leistung."
+    },
+    url: "https://rosencharts.com/",
+    category: "development",
+    icon: "/tech/charts.png"
   }
 ];
 
