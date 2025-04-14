@@ -6,11 +6,11 @@ import { translations, Translations } from './translations';
 type Locale = 'es' | 'en' | 'de';
 
 // Mapeo simplificado de países a idiomas
-const countryToLocale: Record<string, Locale> = {
-  'ES': 'es', // España -> Español
-  'DE': 'de', // Alemania -> Alemán
-  // El resto de países usará inglés por defecto
-};
+// const countryToLocale: Record<string, Locale> = {
+//   'ES': 'es', // España -> Español
+//   'DE': 'de', // Alemania -> Alemán
+//   // El resto de países usará inglés por defecto
+// };
 
 type LocaleContextType = {
   locale: Locale;
