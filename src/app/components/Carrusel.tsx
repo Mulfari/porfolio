@@ -417,7 +417,7 @@ export default function TechIconsCarousel() {
 
   return (
     <div 
-      className="w-full max-w-5xl mx-auto py-8 px-2 sm:px-4 overflow-hidden"
+      className="w-full max-w-5xl mx-auto py-12 px-4 overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -439,11 +439,8 @@ export default function TechIconsCarousel() {
       >
         <CarouselContent>
           {technologies.map((tech, index) => (
-            <CarouselItem 
-              key={index} 
-              className="basis-2/3 xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 px-0 sm:px-1"
-            >
-                <div className="flex flex-col items-center justify-center p-1">
+            <CarouselItem key={index} className="basis-1/5 md:basis-1/6 lg:basis-1/8">
+                <div className="flex flex-col items-center justify-center p-2">
                   <div 
                     className={`relative overflow-hidden rounded-2xl ${tech.bgGradient} backdrop-blur-sm 
                     border ${tech.borderColor} shadow-md hover:${tech.shadowColor} hover:shadow-lg
