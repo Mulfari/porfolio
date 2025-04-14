@@ -58,6 +58,18 @@ const tools: Tool[] = [
     url: "https://rosencharts.com/",
     category: "development",
     icon: "/tech/charts.png"
+  },
+  {
+    id: "webmobilefirst",
+    name: "Web Mobile First",
+    description: {
+      es: "Simulador avanzado de dispositivos móviles para pruebas responsive. Permite visualizar y probar sitios web en múltiples dispositivos (iPhone, Galaxy, Pixel, iPad) con capturas de pantalla HD y grabación de videos GIF para presentaciones profesionales.",
+      en: "Advanced mobile device simulator for responsive testing. View and test websites across multiple devices (iPhone, Galaxy, Pixel, iPad) with HD screenshots and GIF video recording capabilities for professional presentations.",
+      de: "Fortschrittlicher Mobilgeräte-Simulator für Responsive-Tests. Websites auf verschiedenen Geräten (iPhone, Galaxy, Pixel, iPad) anzeigen und testen, mit HD-Screenshots und GIF-Videoaufnahme für professionelle Präsentationen."
+    },
+    url: "https://www.webmobilefirst.com/",
+    category: "development",
+    icon: "/icons/webmobilefirst.png"
   }
 ];
 

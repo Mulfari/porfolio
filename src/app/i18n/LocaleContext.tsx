@@ -45,29 +45,28 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
           return;
         }
 
-        // Si no hay idioma guardado, intentamos detectar el país por IP
-        const response = await fetch('https://ipapi.co/json/');
-        if (!response.ok) throw new Error('Error fetching geolocation data');
-        
-        const data = await response.json();
-        const countryCode = data.country_code;
-        
-        if (countryCode && countryToLocale[countryCode]) {
-          // Si el país es España o Alemania, usamos el idioma correspondiente
-          setLocale(countryToLocale[countryCode]);
+        // Intentar obtener el idioma del navegador
+        const browserLang = navigator.language.split('-')[0];
+        if (browserLang === 'es') {
+          setLocale('es');
+        } else if (browserLang === 'de') {
+          setLocale('de');
         } else {
-          // Para el resto de países, inglés por defecto
           setLocale('en');
         }
+
+        // Guardar el idioma detectado
+        localStorage.setItem('locale', locale);
       } catch (error) {
-        console.error('Error detecting location:', error);
-        // En caso de error, usar inglés como idioma por defecto
-        setLocale('en');
+        console.error('Error detecting language:', error);
+        // En caso de error, usar español como idioma por defecto
+        setLocale('es');
+        localStorage.setItem('locale', 'es');
       }
     }
 
     detectLocale();
-  }, [locales]);
+  }, [locales, locale]);
 
   const changeLocale = (newLocale: Locale) => {
     setLocale(newLocale);
