@@ -441,9 +441,9 @@ export default function TechIconsCarousel() {
           {technologies.map((tech, index) => (
             <CarouselItem 
               key={index} 
-              className="basis-2/3 xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 px-1 sm:px-2"
+              className="basis-2/3 xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 px-0 sm:px-1"
             >
-                <div className="flex flex-col items-center justify-center p-2">
+                <div className="flex flex-col items-center justify-center p-1">
                   <div 
                     className={`relative overflow-hidden rounded-2xl ${tech.bgGradient} backdrop-blur-sm 
                     border ${tech.borderColor} shadow-md hover:${tech.shadowColor} hover:shadow-lg
